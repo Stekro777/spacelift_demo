@@ -6,7 +6,7 @@ resource "spacelift_stack" "tf-demo-dev" {
   name              = "member_int_dev"
   repository        = "tfdemo"
   terraform_version = "1.5.7"
-  space             = "root"
+  parent_space_id = "root"
 }
 
 resource "spacelift_stack" "tf-demo_prod" {
@@ -17,5 +17,5 @@ resource "spacelift_stack" "tf-demo_prod" {
   name              = "member_int_prod"
   repository        = "tfdemo"
   terraform_version = "1.5.7"
-  space             = "root" 
+  parent_space_id = "root"
 }
